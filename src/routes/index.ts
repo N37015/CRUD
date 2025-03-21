@@ -1,1 +1,1 @@
-export { default as productosRoutes } from "./productos.Routes";
+export { default as productosRoutes } from "./productos.routes.ts";
