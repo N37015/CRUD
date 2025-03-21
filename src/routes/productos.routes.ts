@@ -1,12 +1,12 @@
-import { Router } from 'express';
-import { getAll, insertAll } from '../controllers/productos.controller.ts'; // Importar controladores
+import { Router } from "express";
+import { getBD, insertBD, updateBD, deleteBD } from "../controllers/productos.controller.ts";
 
 const router = Router();
 
-// Ruta para obtener todos los productos (GET /productos/all)
-router.get('/all', getAll);
+// Rutas para productos
+router.get("/all", getBD); // Obtener todos los productos
+router.post("/all", insertBD); // Insertar un nuevo producto
+router.put("/all/:id", updateBD); // Actualizar un producto por ID
+router.delete("/all/:id", deleteBD); // Eliminar un producto por ID
 
-// Ruta para insertar un producto (POST /productos/insert)
-router.post('/all', insertAll);
-
-export default router; // Exportar el enrutador
+export default router;
